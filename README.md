@@ -87,7 +87,7 @@ sudo vim /etc/init.wsl
 service docker start
 sudo chmod +x /etc/init.wsl
 ```
-1.  关闭wsl，在windows添加启动任务
+12. 关闭wsl，在windows添加启动任务
 按win+r打开快速启动，输入
 ```shell
 shell:startup
@@ -97,4 +97,16 @@ shell:startup
 Set ws = WScript.CreateObject("WScript.Shell")
 ws.run "wsl -d Ubuntu-22.04 -u root /etc/init.wsl"
 ```
-   
+13. 备份Ubuntu-22.04子系统
+查看已经安装的版本
+```shell
+wsl -l
+```
+14. 在子系统关闭的状态下输入
+```shell
+wsl --export Ubuntu-22.04 ubuntu-22.04.tar
+```
+导入命令
+```shell
+wsl --import ubuntu-22.04.tar
+```
