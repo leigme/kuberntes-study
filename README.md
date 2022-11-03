@@ -66,7 +66,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 8. 启动minikube容器
 ```shell
-minikube start --driver=docker --container-runtime=containerd --image-mirror-country='cn' --kubernetes-version=v1.25.2 --force
+minikube start --driver=docker --image-mirror-country='cn' --kubernetes-version=v1.23.13
 ```
 9. 安装golang开发环境
 ```shell
